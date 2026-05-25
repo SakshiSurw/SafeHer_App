@@ -1,0 +1,1 @@
+FROM node:18-alpine\n\nWORKDIR /app\n\nCOPY package.json package-lock.json ./\nRUN npm install\n\nCOPY . .\n\nEXPOSE 5000\n\nCMD [\"npm\", \"start\"]\n"
